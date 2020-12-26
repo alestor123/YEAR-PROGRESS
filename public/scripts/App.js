@@ -4,6 +4,12 @@ monthNames = ["January", "February", "March", "April", "May", "June",
 time = document.getElementById('time'),
 year = document.getElementById('year');
 setInterval(()=> {
-var today = new Date()
+today = new Date()
 time.innerHTML =  monthNames[today.getMonth()] + ' ' + days[today.getDay()] + '  ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
+year.innerHTML = `${percent()}%`
+year.style.width = `${percent()}%`
 }, 500);
+function percent(){
+    return Math.floor((((((today - new Date(new Date().getFullYear(), 0, 1)) / (1000 * 60 * 60 * 24)) * 100) / 365).toFixed(6)))
+}
+  

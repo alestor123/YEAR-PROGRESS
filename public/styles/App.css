@@ -2,3 +2,13 @@ body{
  font-family: monospace;
  text-align: center;   
 }
+#year{
+    display: flex;
+    align-items: center;
+    justify-content : center;
+    border-radius: 5px 0px 0px 5px;
+    background-color : #6ad058;
+    height : 25px;}
+#cont{
+    padding: 4%;
+}

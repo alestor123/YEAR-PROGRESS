@@ -6,8 +6,10 @@ year = document.getElementById('year');
 setInterval(()=> {
 today = new Date()
 time.innerHTML =  monthNames[today.getMonth()] + ' ' + days[today.getDay()] + '  ' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds()
-year.innerHTML = `${percent()}%`
-year.style.width = `${percent()}%`
+percentVal = `${percent()}%`
+year.innerHTML = percentVal
+document.title = `${percent()}%`
+year.style.width = percentVal
 }, 500);
 function percent(){
     return Math.floor((((((today - new Date(new Date().getFullYear(), 0, 1)) / (1000 * 60 * 60 * 24)) * 100) / 365).toFixed(6)))
